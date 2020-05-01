@@ -1,0 +1,11 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+    <h2>Agendamento</h2>
+
+    <ul style = "font-size: 18px">
+        {% for evento in eventos %} <!-- aceita comandos python entre chaves e porcentagem -->
+            <li>{{ evento.titulo }} - {{ evento.get_data_evento }}</li> <!-- quando tiver 2 chaves lista na pagina -->
+        {% endfor %}
+    </ul>
+{% endblock %}
