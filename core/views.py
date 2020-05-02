@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, redirect
 from core.models import Evento
 from django.contrib.auth.decorators import login_required
@@ -41,5 +42,6 @@ def lista_eventos(request):
     usuario = request.user
     evento = Evento.objects.filter (usuario=usuario)
     #evento = Evento.objects.all()
+
     dados = {'eventos':evento}
     return render(request, 'agenda.html', dados)
