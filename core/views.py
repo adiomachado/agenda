@@ -11,7 +11,6 @@ tem que importar o redirect from django.shortcuts import redirect
 def index(request):
     return redirect('/agenda/')
 """
-
 def login_user(request):
     return render(request, 'login.html')
 
