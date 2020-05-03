@@ -3,7 +3,7 @@
 {% block content %}
     <h2>Agendamento</h2>
 
-    <ul style = "font-size: 18px">
+    <ul style = "font-size: 18px"> <!-- aumenta um pouco o fonte -->
         {% for evento in eventos %} <!-- aceita comandos python entre chaves e porcentagem -->
             <li>{{ evento.titulo }} - {{ evento.get_data_evento }}</li> <!-- quando tiver 2 chaves lista na pagina -->
         {% endfor %}
