@@ -7,7 +7,11 @@
     </a>
     <ul style = "font-size: 18px"> <!-- aumenta um pouco o fonte -->
         {% for evento in eventos %} <!-- aceita comandos python entre chaves e porcentagem -->
-            <li>{{ evento.titulo }} - {{ evento.get_data_evento }}</li> <!-- quando tiver 2 chaves lista na pagina -->
+            <li>
+                {{ evento.titulo }} - {{ evento.get_data_evento }}
+                ( <a href="#">Editar</a>
+                / <a href="evento/delete/{{ evento.id }}/">Excluir</a> )
+            </li> <!-- quando tiver 2 chaves lista na pagina -->
         {% endfor %}
     </ul>
 {% endblock %}
